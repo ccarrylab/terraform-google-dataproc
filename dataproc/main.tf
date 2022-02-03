@@ -1,6 +1,5 @@
 resource "google_dataproc_cluster" "dataproc_cluster" {
     name    = "main"
-    credentials = file("myCredentials.json")
     project = "orbital-ability-340123"
     region  = "us-east4"
 
