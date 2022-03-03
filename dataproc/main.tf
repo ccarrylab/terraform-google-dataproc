@@ -1,6 +1,6 @@
 resource "google_dataproc_cluster" "dataproc_cluster" {
     name    = "main"
-    project = "orbital-ability-340123"
+    project = "starlit-gift-343013"
     region  = "us-east4"
 
     labels  = var.labels
@@ -59,6 +59,12 @@ resource "google_dataproc_cluster" "dataproc_cluster" {
             internal_ip_only    = true
             tags                = var.network_tags
         }
+        initialization_action {
+            script      = "gs://test-dp-bucket/env-variable.sh"
+            timeout_sec = 500
+        }
+
+         }
         initialization_action {
             script      = "gs://test-dp-bucket/env-variable.sh"
             timeout_sec = 500
