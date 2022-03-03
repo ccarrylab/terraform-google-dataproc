@@ -1,6 +1,6 @@
 module "dataproc_cluster" {
-  source        = "../../dataproc"
-  cluster_name  = ""
+  source        = "github.com/ccarrylab/terraform-google-dataproc"
+  cluster_name  = "awesome"
   project_id    = var.project_id
   region        = var.region
   zone          = var.zone
@@ -31,6 +31,13 @@ module "dataproc_cluster" {
   preemptible_num_local_ssds    = 0
 
   // software_config
-  image_version = "1.4-ubuntu18"
+  image_version = "2.0-ubuntu18"
+
+initialization_action = [
+  { 
+       script = "gs://goog-dataproc-initialization-actions-${REGION}/python/pip-install.sh",
+       timeout_sec = 300
+      },
 
 }
+

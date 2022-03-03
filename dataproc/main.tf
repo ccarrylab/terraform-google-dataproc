@@ -71,4 +71,4 @@ resource "google_dataproc_cluster" "dataproc_cluster" {
         }
 
     }
-}
+    
