@@ -64,11 +64,7 @@ resource "google_dataproc_cluster" "dataproc_cluster" {
             timeout_sec = 500
         }
 
-         }
-        initialization_action {
-            script      = "gs://test-dp-bucket/env-variable.sh"
-            timeout_sec = 500
-        }
+    
 
     }
     
