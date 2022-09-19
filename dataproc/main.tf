@@ -1,6 +1,6 @@
 resource "google_dataproc_cluster" "dataproc_cluster" {
     name    = "main"
-    project = "starlit-gift-343013"
+    project = "disco-beanbag-363013"
     region  = "us-east4"
 
     labels  = var.labels
