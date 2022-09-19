@@ -1,4 +1,4 @@
-resource "google_dataproc_cluster" "dataproc_cluster" {
+resource "google_dataproc_cluster" "dataproc_cluster" 
     name    = "main"
     project = "disco-beanbag-363013"
     region  = "us-east4"
