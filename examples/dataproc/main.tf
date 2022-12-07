@@ -1,6 +1,6 @@
 module "dataproc_cluster" {
   source        = "github.com/ccarrylab/terraform-google-dataproc"
-  cluster_name  = "awesome"
+  cluster_name  = "gtsdataproc_awesome"
   project_id    = var.project_id
   region        = var.region
   zone          = var.zone
