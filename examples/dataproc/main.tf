@@ -37,7 +37,7 @@ initialization_action = [
   { 
        script = "gs://goog-dataproc-initialization-actions-${REGION}/python/pip-install.sh",
        timeout_sec = 300
-      },
+      }
 
 }
 
